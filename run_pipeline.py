@@ -14,6 +14,7 @@ import config
 from src.data_processing import run_dc_pipeline
 from src.grid_simulation import run_all_grid_simulations
 from src.ml_model import run_ml_pipeline
+from src.sumo_network import build_full_scenario
 
 
 def main():
@@ -36,8 +37,12 @@ def main():
     grid_results = run_all_grid_simulations()
 
     # 4. Run ML Pipeline
-    print("\n[3/3] Training Decoupling ML Model...")
+    print("\n[3/4] Training Decoupling ML Model...")
     model, metrics = run_ml_pipeline()
+
+    # 5. Build SUMO Scenario
+    print("\n[4/4] Building SUMO Simulation Environment...")
+    build_full_scenario()
 
     print("\n" + "=" * 80)
     print("✅ PIPELINE COMPLETE!")
