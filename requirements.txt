@@ -14,7 +14,6 @@ plotly>=5.18
 # === SUMO Traffic Simulation ===
 traci
 sumolib
-eclipse-sumo
 sumo-rl>=1.4
 
 # === Reinforcement Learning ===

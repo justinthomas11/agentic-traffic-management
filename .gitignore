@@ -1,0 +1,25 @@
+# Environments
+venv/
+.env
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Project Directories
+models/
+results/
+sumo_config/
+__pycache__/
+
+# Datasets
+datasets/*.csv
+
+# Streamlit
+.streamlit/
+
+# OS Files
+.DS_Store
+Thumbs.db
